@@ -1,19 +1,31 @@
+// javascript
 
-
-
-// need var for the parks
-var orParks = {
-    // objects for each park
-}
+// var for the parks
+var parks = {
+    crla : {
+        name: "crater lake",
+        zip: "97604",
+    },
+    iafl : {
+        name: "ice age floods",
+        zip: "99116",
+    },
+    joda : {
+        name: "john day fossil beds",
+        zip: "97848",
+    },
+    lewi : {
+        name: "lewis and clark",
+        zip: "97103",
+    },
+    crla : {
+        name: "nez perce",
+        zip: "83540",
+    }
+};    
 
 // depending on park selected, by index, append to weather request
-// 1.    Crater Lake (crla)
-// 2.    Ice Age Floods (iafl)
-// 3.    John Day Fossil Beds (joda)
-// 4.    Lewis and Clark (lewi)
-// 5.    Nez Perce (nepe)
 
 // select date for weather request
 
 // append date and location (park) to weather request
-
