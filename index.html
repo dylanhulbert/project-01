@@ -1,16 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project 1</title>
-    <link rel="stylesheet" href="assets/style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2, user-scalable=no" />
+  <meta name="description" content="Semantic-UI-Forest, collection of design, themes and templates for Semantic-UI." />
+  <meta name="keywords" content="Semantic-UI, Theme, Design, Template" />
+  <meta name="author" content="PPType" />
+  <meta name="theme-color" content="#ffffff" />
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+  <title>Explore Oregon</title>
+
+  <!-- semantic UI code CDN -->
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+    type="text/css" />
+  <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+
 </head>
+
 <body>
-   <script src="assets/script.js">
-    
-// lauren is on point for the ui
-   
-   </script>
-</body>
+
+  <body id="root">
+
+    <div class="ui container">
+    </div>
+
+    <!--Sidebar Menu-->
+    <div class="ui vertical inverted sidebar menu">
+    </div>
+    <!--Page Contents-->
+    <div class="pusher">
+      <div class="backgroundImage">
+        <div class="ui inverted vertical masthead center aligned segment">
+          <div class="ui container">
+            <!-- <div class="ui large secondary inverted pointing menu">
+                <a class="toc item"><i class="sidebar icon"></i></a>
+                <a class="active item">Home</a> <a class="item">Work</a>
+                <a class="item">Company</a> <a class="item">Careers</a>
+                <div class="right item">
+                  <a class="ui inverted button">Log in</a>
+                  <a class="ui inverted button">Sign Up</a>
+                </div>
+              </div> -->
+          </div>
+          <div class="ui text container">
+            <h1 class="ui inverted header">Explore Oregon</h1>
+            <h2>Visit one of our beautiful State Parks. <br>
+              Select the State Park and the date to get a five day forecast.
+            </h2>
+            
+            <select class="ui search simple dropdown" id="ParkDropDown">
+              <option value="">Select a State Park</option>
+              <option value="crla">Crater Lake</option>
+              <option value="iafl">Ice Age Floods</option>
+              <option value="joda">John Day Fossil Beds</option>
+              <option value="lewi">Lewis and Clark</option>
+              <option value="nepe">Nez Perce</option>
+            </select>
+
+            <div class="section text-center" id="DateSelector">
+              <form action="/action_page.php">
+                <h3>Select the Date:</h3>
+                <input type="date" name="eventDate" class="move" id="startDate">
+               
+              </form>
+             
+             
+            </div>
+            <div class="button">
+              <button class="ui green button">Search</button>
+              </div>
+            
+          </div>
+         
+           
+          
+        </div>
+        <div class="ui vertical stripe segment">
+          <div class="ui middle aligned stackable grid container">
+            <div class="row">
+              <div class="eight wide column">
+                <h3 class="ui header">We Help Companies and Companions</h3>
+                <p>
+                  We can give your company superpowers to do things that they
+                  never thought possible. Let us delight your customers and
+                  empower your needs...through pure data analytics.
+                </p>
+                <h3 class="ui header">We Make Bananas That Can Dance</h3>
+                <p>
+                  Yes that's right, you thought it was the stuff of dreams, but
+                  even bananas can be bioengineered.
+                </p>
+              </div>
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+
+      <div class="ui inverted vertical footer segment">
+        <div class="ui container">
+          <div class="ui stackable inverted divided equal height stackable grid">
+            <div class="three wide column">
+              <h4 class="ui inverted header">About</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="#root">Sitemap</a>
+                <a class="item" href="#root">Contact Us</a>
+                <a class="item" href="#root">Religious Ceremonies</a>
+                <a class="item" href="#root">Gazebo Plans</a>
+              </div>
+            </div>
+            <div class="three wide column">
+              <h4 class="ui inverted header">Services</h4>
+              <div class="ui inverted link list">
+                <a class="item" href="#root">Banana Pre-Order</a>
+                <a class="item" href="#root">DNA FAQ</a>
+                <a class="item" href="#root">How To Access</a>
+                <a class="item" href="#root">Favorite X-Men</a>
+              </div>
+            </div>
+            <div class="seven wide column">
+              <h4 class="ui inverted header">Footer Header</h4>
+              <p>
+                Extra space for a call to action inside the footer that could
+                help re-engage users.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
+    <script>
+      // $(document).ready(function () {
+      //   // fix menu when passed
+      //   $(".masthead").visibility({
+      //     once: false,
+      //     onBottomPassed: function () {
+      //       $(".fixed.menu").transition("fade in");
+      //     },
+      //     onBottomPassedReverse: function () {
+      //       $(".fixed.menu").transition("fade out");
+      //     }
+      //   });
+
+      //   // create sidebar and attach to menu open
+      //   $(".ui.sidebar").sidebar("attach events", ".toc.item");
+      // });
+    </script>
+  </body>
+
 </html>
+
