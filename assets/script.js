@@ -1,28 +1,28 @@
 // javascript
 
 // var for the parks
-var parks = {
-    crla : {
-        name: "crater lake",
-        zip: "97604",
-    },
-    iafl : {
-        name: "ice age floods",
-        zip: "99116",
-    },
-    joda : {
-        name: "john day fossil beds",
-        zip: "97848",
-    },
-    lewi : {
-        name: "lewis and clark",
-        zip: "97103",
-    },
-    crla : {
-        name: "nez perce",
-        zip: "83540",
-    }
-};    
+// var parks = {
+//     crla : {
+//         name: "crater lake",
+//         zip: "97604",
+//     },
+//     iafl : {
+//         name: "ice age floods",
+//         zip: "99116",
+//     },
+//     joda : {
+//         name: "john day fossil beds",
+//         zip: "97848",
+//     },
+//     lewi : {
+//         name: "lewis and clark",
+//         zip: "97103",
+//     },
+//     crla : {
+//         name: "nez perce",
+//         zip: "83540",
+//     }
+// };    
 
 // depending on park selected, by index, append to weather request
 
@@ -33,15 +33,96 @@ var parks = {
 
 
 // js function for changing background image
-$('#ParkDropDown').on('change', function(){
-value = $(this).val();
+$(document).ready(function () {
+    var value;
+    $('#ParkDropDown').on('change', function () {
+        value = $(this).val();
+        var APIKey = "kBIqlaM6bq5UyDKlkxwMUvMo6EAuPevne8z94XHM";
+        var queryURL = "https://developer.nps.gov/api/v1/parks?parkCode=" + value + "&api_key=" + APIKey;
 
-$('.pusher').css({'background-image':'url(' + [value] + ')'}, {'background-size': 'cover'});
-});
+
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+
+        })
+            .then(function (response) {
+            
+            
+                $(".parkDirections").text("Directions: " + response.data[0].directionsInfo);
+                $(".parkHours").text("Hours of Operation: " + response.data[0].operatingHours[0].description);
+
+                var parkZip = response.data[0].addresses[0].postalCode; 
+                var weatherURL =  "https://api.weatherapi.com/v1/forecast.json?key=ae859661fd494bcea6740915202602&q=" + parkZip + "&days=5"; 
+
+                $.ajax({
+                    url: weatherURL,
+                    method: "GET"
+        
+                }).then(function (response) {
+                   console.log(response)
+                   $(".weatherDate0").text(response.forecast.forecastday[0].date);
+                   $(".weatherDate1").text(response.forecast.forecastday[1].date); 
+                   $(".weatherDate2").text(response.forecast.forecastday[2].date);
+                   $(".weatherDate3").text(response.forecast.forecastday[3].date); 
+                   $(".weatherDate4").text(response.forecast.forecastday[4].date);
+
+                    $(".weatherTemp0").text(response.forecast.forecastday[0].day.avgtemp_f + "F"); 
+                    $(".weatherTemp1").text(response.forecast.forecastday[1].day.avgtemp_f + "F"); 
+                    $(".weatherTemp2").text(response.forecast.forecastday[2].day.avgtemp_f + "F"); 
+                    $(".weatherTemp3").text(response.forecast.forecastday[3].day.avgtemp_f + "F"); 
+                    $(".weatherTemp4").text(response.forecast.forecastday[4].day.avgtemp_f + "F"); 
+                    // $(".weatherIcon").text(response.forecast.forecastday.day.icon); 
+
+
+
+            });
+
+        // $('.pusher').css({'background-image':'url(' + [value] + ')'}, {'background-size': 'cover'});
+        // }
+
+    });
+}); 
+}); 
 
 //js function for onClick event of button
 
-$('#buttonSelector').click(function(){
-    
-})
+// $('#buttonSelector').click(function(){
+
+// })
+
+// var APIKey = "kBIqlaM6bq5UyDKlkxwMUvMo6EAuPevne8z94XHM"; 
+
+
+// var queryURL = "https://developer.nps.gov/api/v1/parks?parkCode=" + value + "&api_key=" + APIKey; 
+// console.log(parkCode)
+
+//     $.ajax({
+//         url: queryURL,
+//         method: "GET"
+
+//     })
+//     .then(function(response) {
+//         $(".crlaDirections").text("Directions: " + response.data[0].directionsInfo); 
+// $(".crlaHours").text("Hours of Operation: " + response.data[0].operatingHours[1]); 
+
+// $(".iaflDirections").text("Directions: " + response.data[0].directionsInfo); 
+// $(".iaflHours").text(
+//     "Winter Hours: " + response.data[0].operatingHours[0], 
+//     "Summer Hours: " + response.data[0].operatingHours[1]
+//     ); 
+// $(".jodaDirections").text("Directions: " + response.data[0].directionsInfo); 
+// $(".jodaHours").text("Hours of Operation: " + response.data[0].operatingHours[0]); 
+// $(".lewiDirections").text("Directions: " + response.data[0].directionsInfo); 
+// $(".lewiHours").text(
+//     "Winter Hours: " + response.data[0].operatingHours[0], 
+//     "Summer Hours: " + response.data[0].operatingHours[1]
+//  )
+//  $(".nepeDirections").text("Directions: " + response.data[0].directionsInfo)
+//  $(".nepeHours").text("Hours of Operation: " + response.data[0].operatingHours[0].description); 
+
+//     })
+
+
+// })
 

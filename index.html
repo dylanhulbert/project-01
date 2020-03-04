@@ -10,6 +10,7 @@
   <meta name="author" content="PPType" />
   <meta name="theme-color" content="#ffffff" />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
+
   <title>Explore Oregon</title>
 
   <!-- semantic UI code CDN -->
@@ -18,6 +19,7 @@
     type="text/css" />
   <link href="https://fonts.googleapis.com/css?family=Vidaloka&display=swap" rel="stylesheet">
   <link rel="stylesheet" type="text/css" href="assets/style.css">
+  
 
 </head>
 
@@ -52,7 +54,18 @@
               Select the State Park and the date to get a five day forecast.
             </h2>
           </div>
-            <div class="ui grid system" id="selectStatePark">
+            <div class="ui grid system" name = "dropDown" id="selectStatePark">
+            <div class="three wide column" id="statePark">
+            <select class="ui search simple dropdown" id="ParkDropDown">
+              <option value="" id="resetImage">Select a State Park</option>
+              <option value="crla"id="crla">Crater Lake</option>
+              <option value="iafl" id="iafl">Ice Age Floods</option>
+              <option value="joda" id="joda">John Day Fossil Beds</option>
+              <option value="lewi" id="lewi">Lewis and Clark</option>
+              <option value="nepe" id="nepe">Nez Perce</option>
+            </select>
+          </div>
+          <!-- <div class="ui grid system" name = "dropDown" id="selectStatePark">
             <div class="three wide column" id="statePark">
             <select class="ui search simple dropdown" id="ParkDropDown">
               <option value="https://wallpaperaccess.com/full/109538.jpg" id="resetImage">Select a State Park</option>
@@ -62,7 +75,7 @@
               <option value="https://live.staticflickr.com/4430/36572261342_54377de201_b.jpg" id="lewi">Lewis and Clark</option>
               <option value="https://www.nationalparks.org/sites/default/files/5882733622_3a5d9e8214_o.jpg" id="nepe">Nez Perce</option>
             </select>
-          </div>
+          </div> -->
 
           <div class="three wide column" id="selectDate">
             <div class="section text-center">
@@ -92,16 +105,40 @@
             <div class="row">
               <div class="eight wide column">
                 <h3 class="ui header">We Help Companies and Companions</h3>
-                <p>
-                  We can give your company superpowers to do things that they
-                  never thought possible. Let us delight your customers and
-                  empower your needs...through pure data analytics.
-                </p>
-                <h3 class="ui header">We Make Bananas That Can Dance</h3>
-                <p>
-                  Yes that's right, you thought it was the stuff of dreams, but
-                  even bananas can be bioengineered.
-                </p>
+                <div>
+                  <p class="parkDirections"></p>
+                  <p class="parkHours"></p>
+                  <p class="parkWinter"></p>
+                  
+
+                
+                <h2>Five Day Forecast:</h2>
+                 
+                <div class="ui grid system">
+                  <div class="three wide column">
+                    <div class="weatherDate0"></div>
+                    <div class="weatherTemp0"></div>
+                  </div>
+                  <div class="three wide column">
+                    <div class="weatherDate1"></div>
+                    <div class="weatherTemp1"></div>
+                  </div>
+                  <div class="three wide column">
+                    <div class="weatherDate2"></div>
+                    <div class="weatherTemp2"></div>
+                  </div>
+                  <div class="three wide column">
+                    <div class="weatherDate3"></div>
+                    <div class="weatherTemp3"></div>
+                  </div>
+                  <div class="three wide column">
+                    <div class="weatherDate4"></div>
+                    <div class="weatherTemp4"></div>
+                  </div>
+
+                 
+                  <!-- <p class="weatherIcon"></p> -->
+                </div>
               </div>
             </div>
 
@@ -145,6 +182,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
     <script src="assets/script.js"></script>
+    
+  
     <script>
       // $(document).ready(function () {
       //   // fix menu when passed
