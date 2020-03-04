@@ -52,7 +52,28 @@ $(document).ready(function () {
                 $(".parkDirections").text("Directions: " + response.data[0].directionsInfo);
                 $(".parkHours").text("Hours of Operation: " + response.data[0].operatingHours[0].description);
 
-            
+                var parkZip = response.data[0].addresses[0].postalCode; 
+                var weatherURL =  "https://api.weatherapi.com/v1/forecast.json?key=ae859661fd494bcea6740915202602&q=" + parkZip + "&days=5"; 
+
+                $.ajax({
+                    url: weatherURL,
+                    method: "GET"
+        
+                }).then(function (response) {
+                   console.log(response)
+                   $(".weatherDate0").text(response.forecast.forecastday[0].date);
+                   $(".weatherDate1").text(response.forecast.forecastday[1].date); 
+                   $(".weatherDate2").text(response.forecast.forecastday[2].date);
+                   $(".weatherDate3").text(response.forecast.forecastday[3].date); 
+                   $(".weatherDate4").text(response.forecast.forecastday[4].date);
+
+                    $(".weatherTemp0").text(response.forecast.forecastday[0].day.avgtemp_f + "F"); 
+                    $(".weatherTemp1").text(response.forecast.forecastday[1].day.avgtemp_f + "F"); 
+                    $(".weatherTemp2").text(response.forecast.forecastday[2].day.avgtemp_f + "F"); 
+                    $(".weatherTemp3").text(response.forecast.forecastday[3].day.avgtemp_f + "F"); 
+                    $(".weatherTemp4").text(response.forecast.forecastday[4].day.avgtemp_f + "F"); 
+                    // $(".weatherIcon").text(response.forecast.forecastday.day.icon); 
+
 
 
             });
@@ -61,6 +82,7 @@ $(document).ready(function () {
         // }
 
     });
+}); 
 }); 
 
 //js function for onClick event of button
