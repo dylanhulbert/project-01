@@ -29,11 +29,14 @@ body {
   margin-bottom: 0em;
   font-size: 4em;
   font-weight: normal;
+  font-family: 'Vidaloka', ;
 }
 
 .masthead h2 {
   font-size: 1.7em;
   font-weight: normal;
+  padding-bottom: 30px;
+  font-family: 'Vidaloka', ;
 }
 
 .ui.vertical.stripe {
@@ -103,21 +106,13 @@ padding: 10px;
 margin-top: 15px;
 float: left;
 } */
-#DateSelector{
-margin-bottom: 100px;
 
 
-}
-h1 {
-font-family: 'Vidaloka', ;
-}
-h2 {
-font-family: 'Vidaloka', ;
-}
 h3 {
 font-family: 'Vidaloka', ;
-padding: 0;
+padding: 0px;
 margin: 0px;
+
 }
 /* #SearchButton {
 float: left;
@@ -131,6 +126,21 @@ background-image: url(https://wallpaperaccess.com/full/109538.jpg);
   background-size: cover;
 
 } */
+#statePark {
+  margin-left: 380px;
+  padding-right: 100px;
+  padding-top: 30px;
+
+}
+#selectDate {
+  margin-right: 10px;
+  padding-right: 80px;
+}
+#searchButton {
+ margin-right: auto;
+    padding-top: 30px;
+    padding-right: 473px;
+}
 
 
 @media only screen and (max-width: 700px) {

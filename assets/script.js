@@ -29,3 +29,19 @@ var parks = {
 // select date for weather request
 
 // append date and location (park) to weather request
+
+
+
+// js function for changing background image
+$('#ParkDropDown').on('change', function(){
+value = $(this).val();
+
+$('.pusher').css({'background-image':'url(' + [value] + ')'}, {'background-size': 'cover'});
+});
+
+//js function for onClick event of button
+
+$('#buttonSelector').click(function(){
+    
+})
+
