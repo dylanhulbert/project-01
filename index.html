@@ -11,7 +11,7 @@
   <meta name="theme-color" content="#ffffff" />
   <link rel="icon" href="assets/favicon.ico" type="image/x-icon" />
 
-  <title>Explore Oregon</title>
+  <title>Explore Cascadia</title>
 
   <!-- semantic UI code CDN -->
 
@@ -51,7 +51,7 @@
           <div class="ui text container">
             <h1 class="ui inverted header">Explore Cascadia</h1>
             <h2>Visit one of our beautiful State Parks. <br>
-              Select the State Park and the date to get a five day forecast.
+              Select the State Park in order to get Hours, Directions, and a Five Day Forecast
             </h2>
           </div>
             <div class="ui grid system" name = "dropDown" id="selectStatePark">
@@ -68,20 +68,7 @@
 
             
           </div>
-          <!-- <div class="ui grid system" name = "dropDown" id="selectStatePark">
-            <div class="three wide column" id="statePark">
-            <select class="ui search simple dropdown" id="ParkDropDown">
-              <option value="https://wallpaperaccess.com/full/109538.jpg" id="resetImage">Select a State Park</option>
-              <option value="https://wallpapercave.com/wp/0HcSAxo.jpg"id="crla">Crater Lake</option>
-              <option value="https://upload.wikimedia.org/wikipedia/commons/6/69/Dry_Falls_%28Washington%29.jpg" id="iafl">Ice Age Floods</option>
-              <option value="https://cdn6.dissolve.com/p/D256_42_854/D256_42_854_1200.jpg" id="joda">John Day Fossil Beds</option>
-              <option value="https://live.staticflickr.com/4430/36572261342_54377de201_b.jpg" id="lewi">Lewis and Clark</option>
-              <option value="https://www.nationalparks.org/sites/default/files/5882733622_3a5d9e8214_o.jpg" id="nepe">Nez Perce</option>
-            </select>
-          </div> -->
-
-          
-           
+       
             
             
           </div>
@@ -94,10 +81,12 @@
           <div class="ui middle aligned stackable grid container">
             <div class="row">
               <div class="eight wide column" id="npsResponse">
-                <h3 class="ui header">We Help Companies and Companions</h3>
+                <!-- <h3 class="ui header" id="directionsHours"></h3> -->
                 <div>
-                  <p class="parkDirections"></p>
+                  <h2 class="Hours"></h2>
                   <p class="parkHours"></p>
+                  <h2 class="Directions"></h2>
+                  <p class="parkDirections"></p>
                   <p class="parkWinter"></p>
 
               
