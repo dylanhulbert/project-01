@@ -1,5 +1,5 @@
 # project-01
-Team Project 01
+Explore Cascadia
 
 The objective of this project was to create a responsive webpage utilizing data from API's that we had not previously used in class. We chose to use the NPS (National Park Service) API and the Weather API. Using the data collected from the response, we chose to display to the user the park hours, directions, five day forecast, and two images of each of the parks upon selection from the dropdown. 
 
