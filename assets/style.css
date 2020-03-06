@@ -80,11 +80,7 @@ body {
 .secondary.pointing.menu .toc.item {
   display: none;
 }
-/* .ui.vertical.segment {
-  background-image: url(https://wallpaperaccess.com/full/109538.jpg);
-  background-size: cover; */
-  
-/* } */
+
 .pusher {
   background-image: url(https://wallpaperaccess.com/full/109538.jpg);
   background-size: cover;
@@ -102,11 +98,6 @@ body {
 min-height: 50px;
 padding: 10px;
 }
-/* #ParkDropDown{
-margin-top: 15px;
-float: left;
-} */
-
 
 h3 {
 font-family: 'Vidaloka', ;
@@ -158,7 +149,9 @@ img {
   padding-top: 30px;
 }
 #npsResponse {
-  margin-bottom: 210px;
+  
+  margin-top: 50px;
+  margin-bottom: 150px;
 }
 
 @media only screen and (max-width: 700px) {
@@ -192,5 +185,8 @@ img {
 =======
 .something {
   color: beige;
+}
+.ui.vertical.stripe {
+  padding: 0px;
 }
 
