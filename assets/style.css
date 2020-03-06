@@ -151,6 +151,7 @@ h2{
 img {
   max-width: 400px;
   max-height: 400px;
+  border-radius: 25px;
 }
 .parkImg2 {
   padding-left: 110px;
