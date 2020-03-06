@@ -38,6 +38,7 @@ $(document).ready(function () {
                     method: "GET"
         
                 }).then(function (response) {
+                    console.log(response)
                    
                     var weatherIcon0 = $("<img>").attr("src", response.forecast.forecastday[0].day.condition.icon);
                     var weatherIcon1 = $("<img>").attr("src", response.forecast.forecastday[1].day.condition.icon);
@@ -50,6 +51,12 @@ $(document).ready(function () {
                    $(".weatherDate2").text(response.forecast.forecastday[2].date);
                    $(".weatherDate3").text(response.forecast.forecastday[3].date); 
                    $(".weatherDate4").text(response.forecast.forecastday[4].date);
+
+                   $(".weatherCondition0").text(response.forecast.forecastday[0].day.condition.text);
+                   $(".weatherCondition1").text(response.forecast.forecastday[1].day.condition.text);
+                   $(".weatherCondition2").text(response.forecast.forecastday[2].day.condition.text);
+                   $(".weatherCondition3").text(response.forecast.forecastday[3].day.condition.text);
+                   $(".weatherCondition4").text(response.forecast.forecastday[4].day.condition.text);
 
                     $(".weatherTemp0").text(response.forecast.forecastday[0].day.avgtemp_f + "F"); 
                     $(".weatherTemp1").text(response.forecast.forecastday[1].day.avgtemp_f + "F"); 
