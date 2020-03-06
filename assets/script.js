@@ -47,6 +47,9 @@ $(document).ready(function () {
 
         })
             .then(function (response) {
+            console.log(response)
+
+                $(".fiveDayForecast").text("Five Day Forecast:")
             
                 
                 var parkImg = $("<img>").attr("src", response.data[0].images[0].url);

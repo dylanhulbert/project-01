@@ -49,7 +49,7 @@
               </div> -->
           </div>
           <div class="ui text container">
-            <h1 class="ui inverted header">Explore Oregon</h1>
+            <h1 class="ui inverted header">Explore Cascadia</h1>
             <h2>Visit one of our beautiful State Parks. <br>
               Select the State Park and the date to get a five day forecast.
             </h2>
@@ -61,7 +61,7 @@
               <option value="crla"id="crla">Crater Lake</option>
               <option value="iafl" id="iafl">Ice Age Floods</option>
               <option value="joda" id="joda">John Day Fossil Beds</option>
-              <option value="lewi" id="lewi">Lewis and Clark</option>
+              <option value="fova" id="fova">Fort Vancouver</option>
               <option value="nepe" id="nepe">Nez Perce</option>
             </select>
 
@@ -80,21 +80,8 @@
             </select>
           </div> -->
 
-          <div class="three wide column" id="selectDate">
-            <div class="section text-center">
-              <form action="/action_page.php">
-                <h3>Select the Date:</h3>
-                <input type="date" name="eventDate" class="move" id="startDate">
-               
-              </form>
-             
-              </div>
-            </div>
-            <div class="five wide column" id="searchButton">
-            <div class="button">
-              <button class="ui inverted basic button" id="buttonSelector">Search</button>
-              </div>
-            </div>
+          
+           
             
             
           </div>
@@ -117,9 +104,9 @@
                   
 
                 
-                <h1>Five Day Forecast:</h1>
+                <h2 class="fiveDayForecast"></h2>
                  
-                <div class="ui grid system">
+                <div class="ui grid system" id="weatherResponse">
                   <div class="three wide column">
                     <div class="weatherDate0"></div>
                     <div class="weatherTemp0"></div>
