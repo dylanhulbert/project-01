@@ -47,8 +47,9 @@ $(document).ready(function () {
 
         })
             .then(function (response) {
-            
-            
+            console.log(response)
+
+                $(".fiveDayForecast").text("Five Day Forecast:")
                 $(".parkDirections").text("Directions: " + response.data[0].directionsInfo);
                 $(".parkHours").text("Hours of Operation: " + response.data[0].operatingHours[0].description);
 
@@ -60,7 +61,7 @@ $(document).ready(function () {
                     method: "GET"
         
                 }).then(function (response) {
-                   console.log(response)
+                   
                    $(".weatherDate0").text(response.forecast.forecastday[0].date);
                    $(".weatherDate1").text(response.forecast.forecastday[1].date); 
                    $(".weatherDate2").text(response.forecast.forecastday[2].date);
