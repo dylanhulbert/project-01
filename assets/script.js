@@ -50,9 +50,17 @@ $(document).ready(function () {
             console.log(response)
 
                 $(".fiveDayForecast").text("Five Day Forecast:")
+            
+                
+                var parkImg = $("<img>").attr("src", response.data[0].images[0].url);
+                var parkImg2 = $("<img>").attr("src", response.data[0].images[1].url);
+               
+            
                 $(".parkDirections").text("Directions: " + response.data[0].directionsInfo);
                 $(".parkHours").text("Hours of Operation: " + response.data[0].operatingHours[0].description);
-
+                $(".parkImg").html(parkImg); 
+                $(".parkImg2").html(parkImg2); 
+                
                 var parkZip = response.data[0].addresses[0].postalCode; 
                 var weatherURL =  "https://api.weatherapi.com/v1/forecast.json?key=ae859661fd494bcea6740915202602&q=" + parkZip + "&days=5"; 
 
@@ -62,6 +70,12 @@ $(document).ready(function () {
         
                 }).then(function (response) {
                    
+                    var weatherIcon0 = $("<img>").attr("src", response.forecast.forecastday[0].day.condition.icon);
+                    var weatherIcon1 = $("<img>").attr("src", response.forecast.forecastday[1].day.condition.icon);
+                    var weatherIcon2 = $("<img>").attr("src", response.forecast.forecastday[2].day.condition.icon);
+                    var weatherIcon3 = $("<img>").attr("src", response.forecast.forecastday[3].day.condition.icon);
+                    var weatherIcon4 = $("<img>").attr("src", response.forecast.forecastday[4].day.condition.icon);
+                    
                    $(".weatherDate0").text(response.forecast.forecastday[0].date);
                    $(".weatherDate1").text(response.forecast.forecastday[1].date); 
                    $(".weatherDate2").text(response.forecast.forecastday[2].date);
@@ -73,7 +87,12 @@ $(document).ready(function () {
                     $(".weatherTemp2").text(response.forecast.forecastday[2].day.avgtemp_f + "F"); 
                     $(".weatherTemp3").text(response.forecast.forecastday[3].day.avgtemp_f + "F"); 
                     $(".weatherTemp4").text(response.forecast.forecastday[4].day.avgtemp_f + "F"); 
-                    // $(".weatherIcon").text(response.forecast.forecastday.day.icon); 
+
+                    $(".weatherIcon0").html(weatherIcon0); 
+                    $(".weatherIcon1").html(weatherIcon1); 
+                    $(".weatherIcon2").html(weatherIcon2); 
+                    $(".weatherIcon3").html(weatherIcon3); 
+                    $(".weatherIcon4").html(weatherIcon4); 
 
 
 

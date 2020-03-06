@@ -145,6 +145,17 @@ h2{
     padding-right: 473px;
 }
 
+img {
+  max-width: 400px;
+  max-height: 400px;
+}
+.parkImg2 {
+  padding-left: 110px;
+  padding-top: 30px;
+}
+#npsResponse {
+  margin-bottom: 210px;
+}
 
 @media only screen and (max-width: 700px) {
   .ui.fixed.menu {
