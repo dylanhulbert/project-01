@@ -144,9 +144,15 @@ img {
   max-height: 400px;
   border-radius: 25px;
 }
+.parkImg {
+  margin-top: 10px;
+}
 .parkImg2 {
   padding-left: 110px;
   padding-top: 30px;
+}
+.parkNumber {
+  color: white;
 }
 #npsResponse {
   

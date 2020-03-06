@@ -18,6 +18,7 @@ $(document).ready(function () {
 
             $(".Hours").text("Hours"); 
             $(".Directions").text("Directions")
+            $(".Number").text("Phone Number")
                 $(".fiveDayForecast").text("Five Day Forecast")
             
                 
@@ -27,6 +28,18 @@ $(document).ready(function () {
             
                 $(".parkDirections").text(response.data[0].directionsInfo); 
                 $(".parkHours").text(response.data[0].operatingHours[0].description);
+                $(".parkNumber").text(response.data[0].contacts.phoneNumbers[0].phoneNumber[0] +
+                    response.data[0].contacts.phoneNumbers[0].phoneNumber[1] +
+                    response.data[0].contacts.phoneNumbers[0].phoneNumber[2] + "-" +
+                    response.data[0].contacts.phoneNumbers[0].phoneNumber[3] +
+                    response.data[0].contacts.phoneNumbers[0].phoneNumber[4] +
+                    response.data[0].contacts.phoneNumbers[0].phoneNumber[5] + "-" +
+                    response.data[0].contacts.phoneNumbers[0].phoneNumber[6] +
+                    response.data[0].contacts.phoneNumbers[0].phoneNumber[7] +
+                    response.data[0].contacts.phoneNumbers[0].phoneNumber[8] +
+                    response.data[0].contacts.phoneNumbers[0].phoneNumber[9]
+                    ); 
+
                 $(".parkImg").html(parkImg); 
                 $(".parkImg2").html(parkImg2); 
                 
@@ -38,7 +51,7 @@ $(document).ready(function () {
                     method: "GET"
         
                 }).then(function (response) {
-                    console.log(response)
+                  
                    
                     var weatherIcon0 = $("<img>").attr("src", response.forecast.forecastday[0].day.condition.icon);
                     var weatherIcon1 = $("<img>").attr("src", response.forecast.forecastday[1].day.condition.icon);

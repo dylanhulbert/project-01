@@ -39,8 +39,8 @@
         <div class="ui inverted vertical masthead center aligned segment">
           <div class="ui text container">
             <h1 class="ui inverted header">Explore Cascadia</h1>
-            <h2>Visit one of our beautiful State Parks. <br>
-              Select the State Park in order to get Hours, Directions, and a Five Day Forecast
+            <h2>Visit one of our beautiful National Parks. <br>
+              Select the State Park in order to get Hours, Directions, Contact Information and a Five Day Forecast
             </h2>
           </div>
           <div class="ui stackable grid system" name="dropDown" id="selectStatePark">
@@ -48,10 +48,14 @@
               <select class="ui selection dropdown" id="ParkDropDown">
                 <option value="" id="resetImage">Select a State Park</option>
                 <option value="crla" id="crla">Crater Lake</option>
-                <option value="iafl" id="iafl">Ice Age Floods</option>
                 <option value="joda" id="joda">John Day Fossil Beds</option>
                 <option value="fova" id="fova">Fort Vancouver</option>
                 <option value="nepe" id="nepe">Nez Perce</option>
+                <option value="orca" id="orca">Oregon Caves</option>
+                <option value="ebla" id="ebla">Ebey's Landing</option>
+                <option value="klse" id="ebla">Klondike Gold Rush</option>
+                <option value="mora" id="mora">Mt. Rainier</option>
+                <option value="olym" id="olym">Olympic</option>
               </select>
             </div>
           </div>
@@ -68,6 +72,8 @@
                   <h2 class="Directions"></h2>
                   <p class="parkDirections"></p>
                   <p class="parkWinter"></p>
+                  <h2 class="Number"></h2>
+                  <p class="parkNumber"></p>
 
                   <!-- Park Five Day Forecast HTML -->
                   <h2 class="fiveDayForecast"></h2>
