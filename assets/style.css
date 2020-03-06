@@ -144,6 +144,9 @@ h2{
     padding-top: 30px;
     padding-right: 473px;
 }
+#directionsHours {
+  color: white;
+}
 
 img {
   max-width: 400px;
