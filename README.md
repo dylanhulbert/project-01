@@ -10,6 +10,8 @@ Another newly developed skill is that as a team, we got a lot of practice utiliz
 Here is a link to the webpage: 
 https://dylanhulbert.github.io/project-01/
 
+Here is a link to our slide presentation:
+https://dyhu.co/2v3OxsX
 
 Here is a screenshot of our project: 
 ![](./assets/img/screenshot.png)
