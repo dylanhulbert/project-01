@@ -19,7 +19,7 @@ $(document).ready(function () {
             $(".Hours").text("Hours"); 
             $(".Directions").text("Directions")
             $(".Number").text("Phone Number")
-                $(".fiveDayForecast").text("Five Day Forecast")
+                $(".threeDayForecast").text("Three Day Forecast")
             
                 
                 var parkImg = $("<img>").attr("src", response.data[0].images[0].url);
@@ -44,7 +44,7 @@ $(document).ready(function () {
                 $(".parkImg2").html(parkImg2); 
                 
                 var parkZip = response.data[0].addresses[0].postalCode; 
-                var weatherURL =  "https://api.weatherapi.com/v1/forecast.json?key=ae859661fd494bcea6740915202602&q=" + parkZip +; 
+                var weatherURL =  "https://api.weatherapi.com/v1/forecast.json?key=ae859661fd494bcea6740915202602&q=" + parkZip + "&days=3"; 
 
                 $.ajax({
                     url: weatherURL,
@@ -56,36 +56,24 @@ $(document).ready(function () {
                     var weatherIcon0 = $("<img>").attr("src", response.forecast.forecastday[0].day.condition.icon);
                     var weatherIcon1 = $("<img>").attr("src", response.forecast.forecastday[1].day.condition.icon);
                     var weatherIcon2 = $("<img>").attr("src", response.forecast.forecastday[2].day.condition.icon);
-                    // var weatherIcon3 = $("<img>").attr("src", response.forecast.forecastday[3].day.condition.icon);
-                    // var weatherIcon4 = $("<img>").attr("src", response.forecast.forecastday[4].day.condition.icon);
-                    
+ 
                    $(".weatherDate0").text(response.forecast.forecastday[0].date);
                    $(".weatherDate1").text(response.forecast.forecastday[1].date); 
                    $(".weatherDate2").text(response.forecast.forecastday[2].date);
-                  //  $(".weatherDate3").text(response.forecast.forecastday[3].date); 
-                  //  $(".weatherDate4").text(response.forecast.forecastday[4].date);
 
                    $(".weatherCondition0").text(response.forecast.forecastday[0].day.condition.text);
                    $(".weatherCondition1").text(response.forecast.forecastday[1].day.condition.text);
                    $(".weatherCondition2").text(response.forecast.forecastday[2].day.condition.text);
-                  //  $(".weatherCondition3").text(response.forecast.forecastday[3].day.condition.text);
-                  //  $(".weatherCondition4").text(response.forecast.forecastday[4].day.condition.text);
 
                     $(".weatherTemp0").text(response.forecast.forecastday[0].day.avgtemp_f + "F"); 
                     $(".weatherTemp1").text(response.forecast.forecastday[1].day.avgtemp_f + "F"); 
                     $(".weatherTemp2").text(response.forecast.forecastday[2].day.avgtemp_f + "F"); 
-                    // $(".weatherTemp3").text(response.forecast.forecastday[3].day.avgtemp_f + "F"); 
-                    // $(".weatherTemp4").text(response.forecast.forecastday[4].day.avgtemp_f + "F"); 
 
                     $(".weatherIcon0").html(weatherIcon0); 
                     $(".weatherIcon1").html(weatherIcon1); 
                     $(".weatherIcon2").html(weatherIcon2); 
-                    // $(".weatherIcon3").html(weatherIcon3); 
-                    // $(".weatherIcon4").html(weatherIcon4); 
 
-
-
-            });
+           });
 
 
     });
